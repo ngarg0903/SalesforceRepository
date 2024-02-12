@@ -1,0 +1,15 @@
+<template>
+  
+      <lightning-card title="Good Deal Page">
+        <lightning-dual-listbox
+            label="Select Item"
+            source-label="Available Items"
+            selected-label="Selected Items"
+            options={itemOptions}
+            value={selectedItems}
+            onchange={handleSelection}
+        ></lightning-dual-listbox>
+    </lightning-card>
+        <lightning-button label="Checkout" variant="brand" onclick={redirectToCheckout}></lightning-button>
+    
+</template>

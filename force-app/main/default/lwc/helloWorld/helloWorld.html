@@ -1,0 +1,48 @@
+<template>
+<lightning-card title = "Personal">
+<div class = "slds-var-m-around_medium">
+<input type="text" onkeyup={method1}/>
+<div>{A} you are {B}</div></div>
+</lightning-card>
+
+<lightning-card  title="Program for Sum of two numbers">
+<div class = "slds-var-m-around_medium">
+<p class="slds-p-horizontal_small">Give the numbers</p>
+<lightning-input type="text" label = "First no." onkeyup={number1}></lightning-input>
+<lightning-input type="text" label = "Second No." onkeyup={number2}></lightning-input>
+<lightning-button variant="base" label="Result" title="Sum Result" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+<template if:true = {isVisible}>
+
+The Sum of {n1} and {n2} is {sum}
+
+</template>
+</div>
+
+</lightning-card>    
+<lightning-card title = "My Team Members List">
+    <div class="slds-var-m-around_medium">
+        <template for:each={myTeam} for:item="team">
+            <ul class="slds-has-dividers_top-space" key={team}>
+                <li class="slds-item">{team}</li>
+            </ul>
+        </template>
+    </div>
+</lightning-card>
+  
+<lightning-card title = "My Favourite Companies all time">
+    <div class="slds-var-m-around_medium">
+        <template iterator:cl={ceoList}>
+           
+            <ul class="slds-has-dividers_top-space"  key={cl.value.id}>
+                <template if:true = {cl.first}>
+                    <div> Best Companies ever</div></template>
+                <li class="slds-item"><div><strong>{cl.value.Cname}</strong>{cl.value.ceo}</div></li>
+            </ul>
+        </template>
+    </div>
+</lightning-card>
+    
+
+
+    
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Checkout Page">
+        <h2>Selected Items:</h2>
+        <ul>
+            <template for:each={selectedItems} for:item="item">
+                <li key={item.Id}>{item.Name}</li>
+            </template>
+        </ul>
+        <lightning-button label="Confirm Purchase" variant="brand" onclick={handleConfirmPurchase}></lightning-button>
+    </lightning-card>
+</template>

@@ -1,0 +1,8 @@
+{
+    "components": {
+      "checkoutPage1": {
+        "path": "force-app\\main\\default\\lwc\\checkoutPage1\\checkoutPage1.html"
+      }
+    }
+  }
+  
